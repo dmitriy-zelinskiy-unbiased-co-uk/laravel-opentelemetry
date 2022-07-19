@@ -49,7 +49,7 @@ class LaravelOpenTelemetryServiceProvider extends ServiceProvider
      * 
      * @return Tracer|null A configured Tracer, or null if tracing hasn't been enabled.
      */
-    private function initOpenTelemetry(): Tracer
+    private function initOpenTelemetry(): ?Tracer
     {
         if(!config('laravel_opentelemetry.enable')) {
             return null;
